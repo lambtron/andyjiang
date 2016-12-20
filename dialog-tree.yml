@@ -1,0 +1,20 @@
+-
+  line_number: 1
+  content: 'Hey!'
+  responses:
+  -
+    content:
+    destination:
+  -
+    content:
+    destination:
+-
+  line_number:
+  content:
+  responses:
+  -
+    content:
+    destination:
+  -
+    content:
+    destination:

@@ -1,0 +1,14 @@
+{
+  "source": "",
+  "destination": "./docs",
+  "clean": false,
+  "metadata": {
+    "baseUrl": "http://andyjiang.com",
+    "location": "/",
+    "title": "Andy Jiang",
+    "description": "Hello"
+  },
+  "plugins": {
+    "./lib/plugins.js": true
+  }
+}
