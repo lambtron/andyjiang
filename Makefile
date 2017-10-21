@@ -1,40 +1,35 @@
 
 #
-# Binaries.
-#
-
-metalsmith := ./node_modules/.bin/metalsmith
-
-#
 # Default.
 #
 
-default: build
+default: server
 
 #
 # Tasks.
 #
 
-# Remove shit.
+# Install node_modules on your machine.
+install: node_modules
+
+# Install node modules with npm.
+node_modules: package.json
+	@npm install
+	@touch node_modules
+
+# Clean.
 clean:
-	@rm -rf ./node_modules
-	find . -type f -name '/docs/*.html' -delete
+	rm -rf node_modules
 
-# Build client.
-build:
-	@node ./lib/build.js
-	@$(metalsmith)
-
-# Run server.
+# Server.
 server:
-	python -m SimpleHTTPServer 8000
-
-# Deploy.
-deploy:
-	./deploy.sh
+	python -m SimpleHTTPServer \
+  `open "http://localhost:8000/docs"`
 
 #
 # Phonies.
 #
 
-.PHONY: clean build server deploy
+.PHONY: install
+.PHONY: clean
+.PHONY: server
