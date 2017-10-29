@@ -19,4 +19,4 @@ git config user.name 'lambtron'
 
 git add -A
 git commit -m 'Updated site'
-git push origin gh-pages:gh-pages --force
+git push origin master:master --force
