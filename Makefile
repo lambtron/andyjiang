@@ -26,6 +26,10 @@ server:
 	python -m SimpleHTTPServer \
   `open "http://localhost:8000/docs"`
 
+# Deploy.
+deploy:
+	./deploy.sh
+
 #
 # Phonies.
 #
